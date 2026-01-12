@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Dibya Ghosh</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body{
+    background: linear-gradient(135deg,#071627,#0a2a4f);
+    color: #e8f1f8;
+    padding-top:90px;
+    min-height:100vh;
+}
+
+/* HEADER */
+header{
+    position: fixed; top:0; left:0; width:100%;
+    background: rgba(7,22,39,0.95);
+    backdrop-filter: blur(8px);
+    z-index:1000;
+}
+header .container{
+    max-width:1200px; margin:auto;
+    padding:14px 20px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+.navlist{ list-style:none; display:flex; gap:25px; }
+.navlist li a{
+    text-decoration:none;
+    color:#e8f1f8;
+    font-weight:500;
+    position:relative;
+}
+.navlist li a::after{
+    content:''; position:absolute; left:0; bottom:-4px;
+    width:0; height:2px; background:#5fc9ff; transition:.3s;
+}
+.navlist li a:hover::after{ width:100%; }
+.menu-icon{ display:none; font-size:26px; color:#cfe9f7; cursor:pointer; }
+
+@media(max-width:900px){
+    .navlist{
+        position:absolute; top:60px; right:0;
+        background: rgba(7,22,39,0.95);
+        flex-direction: column; width:220px; padding:20px;
+        display:none;
+    }
+    .navlist.active{ display:flex; }
+    .menu-icon{ display:block; }
+}
+
+/* CONTACT SECTION */
+.contact{
+    max-width:700px; margin:50px auto;
+    padding:50px 35px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border-radius:25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    text-align:center;
+    transition:0.3s;
+}
+.contact:hover{
+    transform: translateY(-5px) scale(1.01);
+}
+.contact h2{
+    font-size:38px; color:#00e5ff; margin-bottom:20px;
+}
+.contact p{
+    font-size:18px; margin-bottom:30px; opacity:.85;
+}
+
+/* Email Button */
+.contact a.email-btn{
+    display:inline-block;
+    margin:15px 0;
+    padding:16px 30px;
+    font-size:16px;
+    font-weight:600;
+    color:#0b1c2d;
+    background: linear-gradient(90deg,#5fc9ff,#00e5ff);
+    border-radius:15px;
+    text-decoration:none;
+    transition:.3s;
+}
+.contact a.email-btn:hover{
+    transform: translateY(-3px);
+    box-shadow:0 0 30px rgba(95,201,255,0.5);
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    margin-top:40px; display:flex; justify-content:center; flex-wrap:wrap;
+    gap:15px;
+}
+.social-icons a{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:55px; height:55px;
+    border-radius:50%;
+    font-size:24px; color:#e8f1f8;
+    background: rgba(255,255,255,0.05); 
+    transition:.3s, transform .2s;
+}
+.social-icons a:hover{
+    transform: translateY(-5px) scale(1.1);
+    background: #00e5ff;
+    color:#0b1c2d;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+    <div class="menu-icon" onclick="document.querySelector('.navlist').classList.toggle('active')">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+        <li><a href="pdf/Dibya_CV.pdf">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</div>
+</header>
+
+<section class="contact" id="contact">
+<h2>Contact Me</h2>
+<p>If you want to reach me, send me an email. I will respond as soon as possible.</p>
+
+ <a href="https://mail.google.com/mail/?view=cm&to=dibyaghosh964@gmail.com&su=Contact%20from%20Website" target="_blank" class="email-btn">
+        📧 Email Me
+    </a>
+
+
+
+<div class="social-icons">
+    <a href="https://www.facebook.com/dibya.ghosh.9889"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/dibya___ghosh"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/dibya-ghosh-577aa3326"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/dibyaghosh8"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/Dibyaghosh123"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://app.netlify.com/teams/dibyaghosh8" target="_blank"><i class="fas fa-globe"></i></a>
+</div>
+</section>
+
+</body>
+</html>

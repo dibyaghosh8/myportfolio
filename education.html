@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dibya Ghosh | Education</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #071627, #0a2a4f);
+    color: #e8f1f8;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 22, 39, .95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* NAVIGATION */
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    color: #e8f1f8;
+    font-weight: 500;
+    position: relative;
+}
+
+.navlist li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #5fc9ff;
+    transition: .3s;
+}
+
+.navlist li a:hover::after {
+    width: 100%;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    color: #cfe9f7;
+    cursor: pointer;
+}
+
+/* EDUCATION SECTION */
+.education {
+    padding: 160px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #7fd7ff;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.education h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #00e5ff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Timeline Vertical Line */
+.edu-grid::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: rgba(95, 201, 255, 0.3);
+    border-radius: 2px;
+}
+
+.edu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+}
+
+/* Education Card */
+.edu-card {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: left;
+    border: 1px solid rgba(95, 201, 255, 0.25);
+    width: 45%;
+    position: relative;
+    transition: 0.5s;
+}
+
+.edu-card i {
+    font-size: 36px;
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.edu-card h3 {
+    color: #00e5ff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.edu-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: .85;
+}
+
+/* Left & Right positioning */
+.edu-card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.edu-card:nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Timeline Circles */
+.edu-card::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: #00e5ff;
+    border-radius: 50%;
+    border: 4px solid #071627;
+}
+
+.edu-card:nth-child(odd)::before {
+    right: -50px;
+}
+
+.edu-card:nth-child(even)::before {
+    left: -50px;
+}
+
+/* Hover Effect */
+.edu-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .navlist {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(7, 22, 39, .95);
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        display: none;
+    }
+
+    .navlist.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .edu-card {
+        width: 90% !important;
+        align-self: center !important;
+    }
+
+    .edu-grid::before {
+        left: 20px;
+    }
+
+    .edu-card::before {
+        left: -40px !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+
+        <div class="menu-icon" onclick="document.querySelector('.navlist').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="Certifications.html">Certifications</a></li>
+            <li><a href="pdf/Dibya_CV.pdf">Resume</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- EDUCATION SECTION -->
+<section class="education" id="education">
+    <h2>MY EDUCATION</h2>
+
+    <div class="edu-grid">
+        <div class="edu-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Bachelor of Computer Application (BCA)</h3>
+            <p>RCC Institute of Information Technology, Kolkata</p>
+            <p>2023 - Present</p>
+        </div>
+
+        <div class="edu-card">
+            <i class="fas fa-school"></i>
+            <h3>Higher Secondary (12th)</h3>
+            <p>Kanduah Mahakali High School, Howrah</p>
+            <p>2021 - 2023</p>
+        </div>
+
+        <div class="edu-card">
+            <i class="fas fa-school"></i>
+            <h3>Secondary (10th)</h3>
+            <p>Joynagar Pallishree Vidyaniketan, Howrah</p>
+            <p>2016 - 2021</p>
+        </div>
+
+        <div class="edu-card">
+            <i class="fas fa-school"></i>
+            <h3>Primary School</h3>
+            <p>Paragon Mission School, Howrah</p>
+            <p>2009 - 2016</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+ 

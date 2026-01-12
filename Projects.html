@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Dibya Ghosh</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    /* ===== BASIC RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #071627, #0a2a4f);
+      color: #e8f1f8;
+      padding-top: 80px;
+    }
+/* HEADER */
+.header{
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  background: rgba(11,28,45,0.9);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+.header-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+}
+
+
+/* NAV LIST */
+.navlist{
+  list-style:none;
+  display:flex;
+  gap:18px;
+}
+
+.navlist li a{
+  text-decoration:none;
+  color:#e6eef6;
+  font-size:14px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.navlist li a:hover{
+  color:#7ecbff;
+}
+
+/* HAMBURGER ICON */
+.menu-icon{
+  display:none;
+  font-size:22px;
+  color:#e6eef6;
+  cursor:pointer;
+}
+
+/* RESPONSIVE MENU */
+@media(max-width:768px){
+  .navlist{
+    position:absolute;
+    top:70px;
+    right:5%;
+    background: rgba(11,28,45,0.95);
+    flex-direction:column;
+    padding:15px 20px;
+    border-radius:10px;
+    display:none;
+    gap:15px;
+  }
+
+  .navlist.active{
+    display:flex;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+}
+    /* ===== SECTION ===== */
+    .projects {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 50px;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #00e5ff;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    /* ===== GRID ===== */
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    /* ===== CARD ===== */
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.5s;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(95, 201, 255, 0.2);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 20px 40px rgba(95, 201, 255, 0.4);
+      border-color: #00e5ff;
+    }
+
+    /* ICON */
+    .project-card i {
+      font-size: 36px;
+      width: 65px;
+      height: 65px;
+      line-height: 65px;
+      border-radius: 50%;
+      background: #00e5ff;
+      color: #071627;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover i {
+      transform: scale(1.2);
+    }
+
+    /* MEDIA */
+    .project-card img,
+    .project-card video {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
+
+    .project-card:hover img,
+    .project-card:hover video {
+      transform: scale(1.06) rotate(0.5deg);
+    }
+
+    /* SMALL MEDIA */
+    .project-card.small img {
+      height: 150px;
+    }
+
+    /* TEXT */
+    .project-card h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #7fd7ff;
+      font-weight: 600;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      opacity: .85;
+    }
+
+    /* BUTTONS */
+    .project-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .project-buttons a {
+      padding: 8px 20px;
+      font-size: 13px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #071627;
+      background: #7fd7ff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .project-buttons a.github {
+      background: #e8f1f8;
+    }
+
+    .project-buttons a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    /* LARGE CARD */
+    .project-card.large {
+      grid-column: span 2;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1024px) {
+      .project-card.large {
+        grid-column: span 2;
+      }
+    }
+
+    @media(max-width:768px) {
+      .project-card.large {
+        grid-column: span 1;
+      }
+    }
+
+    @media(max-width:500px) {
+
+      .project-card img,
+      .project-card video {
+        height: 140px;
+      }
+
+      .project-card i {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- ===== NAVIGATION BAR ===== -->
+<header class="header">
+  <div class="container header-container">
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+        <li><a href="pdf/Dibya_CV.pdf" target="_blank">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header> 
+
+  <section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-cards">
+
+      <!-- LARGE PROJECT 1 -->
+      <div class="project-card large" onclick="window.open('https://github.com/dibyaghosh8/Educationwebside','_blank')">
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Education Website</h4>
+        <p>Responsive education website using HTML & CSS.</p>
+        <img src="photos/project1.jpg" muted autoplay loop>
+        <div class="project-buttons">
+          <a href="https://6964fbb99fde5ae9d78b1045--unrivaled-lebkuchen-e9f117.netlify.app/" target="_blank"
+            onclick="event.stopPropagation()">Live</a>
+          <a href="https://github.com/dibyaghosh8/Educationwebside" target="_blank" class="github"
+            onclick="event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+
+      <!-- LARGE PROJECT 2 -->
+      <div class="project-card large" onclick="window.open('https://github.com/dibyaghosh8/food-ordering','_blank')">
+        <i class="fas fa-utensils"></i>
+        <h4>Food Ordering Website</h4>
+        <p>Interactive food ordering web project.</p>
+        <video src="photos/video.mp4" muted autoplay loop></video>
+        <div class="project-buttons">
+          <a href="photos/video.mp4" onclick="event.stopPropagation()">Output</a>
+          <a href="https://github.com/dibyaghosh8/food-ordering" target="_blank" class="github"
+            onclick="event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+
+      <!-- SMALL PROJECT 3 -->
+      <div class="project-card small" onclick="window.open('https://github.com/dibyaghosh8/Tic-Tac-Toe-Game','_blank')">
+        <i class="fas fa-gamepad"></i>
+        <h4>Tic-Tac-Toe</h4>
+        <p>Java based desktop game.</p>
+        <img src="photos/project2.jpg">
+        <div class="project-buttons">
+          <a href="https://www.linkedin.com/posts/dibya-ghosh-577aa3326_implemented-a-tic-tac-toe-game-using-java-activity-7412031032855605248-1kj8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJjGWsBxMMWOxCDe5F4kCvPd8Quqp3ssR4" onclick="event.stopPropagation()">Output</a>
+          <a href="https://github.com/dibyaghosh8/Tic-Tac-Toe-Game" class="github"
+            onclick="event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+
+      <!-- SMALL PROJECT 4 -->
+      <div class="project-card small" onclick="window.open('https://github.com/dibyaghosh8/spotify','_blank')">
+        <i class="fab fa-spotify"></i>
+        <h4>Spotify Music Player</h4>
+        <p>Music player where users can listen to songs.</p>
+        <img src="photos/project3.jpg">
+        <div class="project-buttons">
+          <a href="https://jovial-wisp-c35922.netlify.app/" onclick="event.stopPropagation()">Output</a>
+          <a href="https://github.com/dibyaghosh8/spotify" class="github" onclick="event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+
+      <!-- SMALL PROJECT 5 -->
+      <div class="project-card small" onclick="window.open('https://github.com/dibyaghosh8/Registration','_blank')">
+        <i class="fas fa-user-plus"></i>
+        <h4>Registration Form</h4>
+        <p>User registration form with validation.</p>
+        <img src="photos/project6.jpg">
+        <div class="project-buttons">
+          <a href="#" onclick="event.stopPropagation()">Output</a>
+          <a href="https://github.com/dibyaghosh8/Registration" class="github"
+            onclick="event.stopPropagation()">GitHub</a>
+        </div>
+      </div>
+      <!-- SMALL PROJECT 6 -->
+      <div class="project-card small" onclick="window.open('https://github.com/dibyaghosh8/Calculator-','_blank')"> <i
+          class="fas fa-calculator"></i>
+        <h4>Calculator</h4>
+        <p>Simple calculator built using Java.</p> <img src="photos/project5.jpg">
+        <div class="project-buttons"> <a
+            href="https://www.linkedin.com/posts/dibya-ghosh-577aa3326_built-a-calculator-using-java-activity-7411065416401362944-078P"
+            onclick="event.stopPropagation()">Output</a> <a href="https://github.com/dibyaghosh8/Calculator-"
+            class="github" onclick="event.stopPropagation()">GitHub</a> </div>
+      </div> <!-- SMALL PROJECT 7 -->
+      <div class="project-card small"
+        onclick="window.open('https://github.com/dibyaghosh8/Distance-Speed-Time-Calculator-','_blank')"> <i
+          class="fas fa-stopwatch"></i>
+        <h4>DST Calculator</h4>
+        <p>Distance-Speed-Time calculator using Java.</p> <img src="photos/project4.jpg">
+        <div class="project-buttons"> <a
+            href="https://www.linkedin.com/posts/dibya-ghosh-577aa3326_built-a-distancespeedtime-calculator-using-activity-7411676585252188160-fA0H"
+            onclick="event.stopPropagation()">Output</a> <a
+            href="https://github.com/dibyaghosh8/Distance-Speed-Time-Calculator-" class="github"
+            onclick="event.stopPropagation()">GitHub</a> </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

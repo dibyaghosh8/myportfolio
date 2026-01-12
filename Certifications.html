@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dibya Ghosh | Certifications</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#071627,#0a2a4f);
+    color:#e8f1f8;
+}
+
+/* HEADER */
+/* HEADER */
+.header{
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  background: rgba(11,28,45,0.9);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+.header-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+}
+
+
+/* NAV LIST */
+.navlist{
+  list-style:none;
+  display:flex;
+  gap:18px;
+}
+
+.navlist li a{
+  text-decoration:none;
+  color:#e6eef6;
+  font-size:14px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.navlist li a:hover{
+  color:#7ecbff;
+}
+
+/* HAMBURGER ICON */
+.menu-icon{
+  display:none;
+  font-size:22px;
+  color:#e6eef6;
+  cursor:pointer;
+}
+
+/* RESPONSIVE MENU */
+@media(max-width:768px){
+  .navlist{
+    position:absolute;
+    top:70px;
+    right:5%;
+    background: rgba(11,28,45,0.95);
+    flex-direction:column;
+    padding:15px 20px;
+    border-radius:10px;
+    display:none;
+    gap:15px;
+  }
+
+  .navlist.active{
+    display:flex;
+  }
+
+  .menu-icon{
+    display:block;
+  }
+}
+
+/* CERTIFICATIONS */
+.certifications{
+    padding:140px 20px 60px;
+    max-width:1200px;
+    margin:auto;
+}
+.certifications h2{
+    text-align:center;
+    font-size:36px;
+    color:#7fd7ff;
+    margin-bottom:50px;
+}
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.cert-card{
+    background:rgba(7,22,39,.7);
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    position:relative;
+    cursor:pointer;
+    transition:.3s;
+}
+.cert-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+}
+.cert-card h4{
+    margin-top:12px;
+    color:#00e5ff;
+    font-size:16px;
+}
+.cert-card:hover{
+    transform:translateY(-6px);
+}
+
+/* HOVER BUTTON */
+.view-btn{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transition:.3s;
+    border-radius:15px;
+}
+.view-btn span{
+    background:#00e5ff;
+    color:#000;
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:600;
+}
+.cert-card:hover .view-btn{
+    opacity:1;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+}
+.modal-content{
+    background:#071627;
+    width:90%;
+    max-width:600px;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+.modal-content img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.modal-content a{
+    display:inline-block;
+    background:#00e5ff;
+    color:#000;
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:600;
+    text-decoration:none;
+}
+.close{
+    color:#fff;
+    font-size:26px;
+    position:absolute;
+    top:25px;
+    right:35px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVIGATION BAR ===== -->
+<header class="header">
+  <div class="container header-container">
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
+        <li><a href="pdf/Dibya_CV.pdf" target="_blank">Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="certifications">
+<h2>MY CERTIFICATIONS</h2>
+
+<div class="cert-grid">
+
+<!-- 1 -->
+<div class="cert-card" onclick="openModal('photos/c1.jpg','pdf/Certificate.pdf')">
+    <img src="photos/c1.jpg" alt="Food Ordering System Certificate">
+    <h4>Food Ordering System</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+<!-- 2 -->
+<div class="cert-card" onclick="openModal('photos/c2.jpg','pdf/Python.pdf')">
+    <img src="photos/C2.jpg" alt="Software Programmer – Python Certificate">
+    <h4>Software Programmer – Python</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+<!-- 3 -->
+ <div class="cert-card" onclick="openModal('photos/c5.jpg','pdf/tata_certificate.pdf')">
+    <img src="photos/c5.jpg" alt="Cybersecurity Analyst Certificate">
+    <h4>Cybersecurity Analyst – Job Simulation Program</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+
+<!-- 4 -->
+<div class="cert-card" onclick="openModal('photos/C4.jpg','pdf/UC1.pdf')">
+    <img src="photos/C4.jpg" alt="Python for Data Analysis Certificate">
+    <h4>Python for Data Analysis</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+<!-- 5 -->
+<div class="cert-card" onclick="openModal('photos/C3.jpg','pdf/UC3.pdf')">
+    <img src="photos/C3.jpg" alt="Advanced Power BI Certificate">
+    <h4>Advanced Power BI: Expert Data Analysis & Visualization</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+<!-- 6 -->
+<div class="cert-card" onclick="openModal('photos/C6.jpg','pdf/UC5.pdf')">
+    <img src="photos/C6.jpg" alt="Microsoft Excel Certificate">
+    <h4>Microsoft Excel – Data Analysis Certification</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+<!-- 7 -->
+<div class="cert-card" onclick="openModal('photos/C7.jpg','pdf/UC2.pdf')">
+    <img src="photos/C7.jpg" alt="Java, C++ & PHP Certificate">
+    <h4>Java, C++ & PHP – Beginner Crash Course</h4>
+    <div class="view-btn"><span>View PDF</span></div>
+</div>
+
+
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="pdfModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg">
+        <a id="pdfLink" target="_blank">Open Full PDF</a>
+    </div>
+</div>
+
+<script>
+function openModal(img,pdf){
+    document.getElementById("modalImg").src = img;
+    document.getElementById("pdfLink").href = pdf;
+    document.getElementById("pdfModal").style.display = "flex";
+}
+function closeModal(){
+    document.getElementById("pdfModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

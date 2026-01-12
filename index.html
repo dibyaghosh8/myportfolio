@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibya Ghosh | Portfolio</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="#home" class="logo">
+                <img src="photos/logo.jpg" alt="Dibya Ghosh Logo">
+            </a>
+
+            <div class="menu-icon" onclick="document.querySelector('.navlist').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="navlist">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="Certifications.html">Certifications</a></li>
+                <li><a href="PDF/Dibya_CV.pdf">Resume</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <!-- ===== HOME SECTION ===== -->
+    <section class="home" id="home">
+        <div class="container home-container">
+
+            <div class="hero-text">
+                <h3>Hello, I'm</h3>
+                <h1>Dibya Ghosh</h1>
+                <p>
+                    I am a BCA student at RCC Institute of Information Technology,
+                    passionate about web development and programming.
+                </p>
+
+                <a href="pdf/Dibya_CV.pdf" class="btn" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+
+            <div class="hero-img">
+                <img src="photos/photo.jpg" alt="Dibya Ghosh">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+        <div class="container about-container">
+
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I’m <strong>Dibya Ghosh</strong> from Howrah, West Bengal, currently pursuing
+                    a <strong>Bachelor of Computer Application (BCA)</strong> at
+                    <strong>RCC Institute of Information Technology (RCCIT)</strong>.
+                </p>
+
+                <p>
+                    I have skills in <strong>frontend development</strong> (HTML, CSS, JavaScript),
+                    <strong>backend programming</strong> (Java, Python, PHP), and <strong>databases</strong>
+                    (MongoDB, DBMS). I also have knowledge of <strong>Computer Networking, Operating Systems,
+                        and Data Structures & Algorithms</strong>. I enjoy building practical projects and web
+                    solutions.
+                </p>
+
+                <p>
+                    Outside of academics, I love <strong>playing guitar, drawing, and reading books</strong>.
+                    I am fluent in <strong>Bengali, English, and Hindi</strong>, and I aim to build a
+                    <strong>strong career in technology</strong> by creating innovative and impactful solutions.
+                </p>
+
+
+                <a href="Contact.html" class="btn">Contact Me</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="skills" id="full">
+        <div class="container">
+            <h2 class="section-title">MY SKILLS</h2>
+
+            <div class="skill-box">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>Python</span>
+                <span>PHP</span>
+                <span>MongoDB</span>
+                <span>DBMS</span>
+                <span>Computer Networking</span>
+                <span>Operating System</span>
+                <span>Data Structures & Algorithms</span>
+                <span>Node.js</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="several">
+        <div class="container">
+            <h2 class="section-title">MY PROJECTS</h2>
+
+            <div class="projects-list">
+
+                <a href="https://github.com/dibyaghosh8/Educationwebside" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="photos/project1.jpg" alt="Education Website">
+                        <h4>Educationwebside (HTML & CSS)</h4>
+                        <p>Created a simple education website using HTML and CSS.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/dibyaghosh8/Tic-Tac-Toe-Game" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="photos/project2.jpg" alt="Tic Tac Toe Game">
+                        <h4>Tic-Tac-Toe-Game (Java)</h4>
+                        <p>Developed a Tic-Tac-Toe game using Java.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/dibyaghosh8/spotify" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="photos/project3.jpg" alt="Spotify Music Player">
+                        <h4>Spotify (Music Player)</h4>
+                        <p>Built a music player where users can listen to songs.</p>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="contact" id="con">
+        <div class="container">
+            <h2 class="section-title">CONNECT WITH ME</h2>
+            <p>Follow me on social media or drop a message!</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/dibya.ghosh.9889" target="_blank" class="btn social">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/dibya___ghosh?igsh=MTR2cG5lY2Y4cXhsbA==" target="_blank"
+                    class="btn social">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/dibya-ghosh-577aa3326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank" class="btn social">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/dibyaghosh8" target="_blank" class="btn social">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://x.com/Dibyaghosh123" target="_blank" class="btn social">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://app.netlify.com/teams/dibyaghosh8" target="_blank" class="btn social">
+                    <i class="fas fa-globe"></i> Netlify
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
