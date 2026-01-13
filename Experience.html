@@ -180,6 +180,18 @@ body {
         align-items:center;
     }
 }
+    @media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 20px 40px rgba(95, 201, 255, 0.4);
+    border-color: #00e5ff;
+  }
+
+  .project-card:hover i {
+    transform: scale(1.2);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -253,6 +265,16 @@ body {
 
     </div>
 </section>
+<script>
+  const menuIcon = document.querySelector(".menu-icon");
+  const navList = document.querySelector(".navlist");
+
+  menuIcon.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+</script>
+
 
 </body>
 </html>
+
