@@ -5,9 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience | Dibya Ghosh</title>
 
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
 /* ===== BODY ===== */
-body {
+body{
     margin:0;
     padding:0;
     font-family:"Poppins", Arial, sans-serif;
@@ -16,13 +20,15 @@ body {
     overflow-x:hidden;
     min-height:100vh;
 }
-/* HEADER */
+
+/* ===== HEADER ===== */
 .header{
-  position: fixed;
-  top:0; left:0;
+  position:fixed;
+  top:0;
+  left:0;
   width:100%;
-  background: rgba(11,28,45,0.9);
-  backdrop-filter: blur(10px);
+  background:rgba(11,28,45,0.9);
+  backdrop-filter:blur(10px);
   z-index:1000;
 }
 
@@ -35,7 +41,7 @@ body {
   padding:12px 20px;
 }
 
-/* NAV LIST */
+/* ===== NAV LIST ===== */
 .navlist{
   list-style:none;
   display:flex;
@@ -54,7 +60,7 @@ body {
   color:#7ecbff;
 }
 
-/* HAMBURGER ICON */
+/* ===== MENU ICON ===== */
 .menu-icon{
   display:none;
   font-size:22px;
@@ -62,13 +68,13 @@ body {
   cursor:pointer;
 }
 
-/* RESPONSIVE MENU */
+/* ===== RESPONSIVE NAV ===== */
 @media(max-width:768px){
   .navlist{
     position:absolute;
     top:70px;
     right:5%;
-    background: rgba(11,28,45,0.95);
+    background:rgba(11,28,45,0.95);
     flex-direction:column;
     padding:15px 20px;
     border-radius:10px;
@@ -84,30 +90,37 @@ body {
     display:block;
   }
 }
+
 /* ===== EXPERIENCE SECTION ===== */
-.experience {
+.experience{
     min-height:100vh;
-    padding:80px 20px;
-    text-align:center;
+    padding:110px 20px 60px;
     background:linear-gradient(135deg,#0a1a3d,#07162a);
     display:flex;
-    flex-direction:column;
     justify-content:center;
+    align-items:center;
 }
 
-.experience .section-title {
+.container{
+    max-width:1200px;
+    margin:auto;
+    width:100%;
+    text-align:center;
+}
+
+.section-title{
     color:#7fd7ff;
     font-size:36px;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.experience p {
+.experience p{
     opacity:0.85;
     margin-bottom:35px;
 }
 
 /* ===== EXPERIENCE LIST ===== */
-.experience-list {
+.experience-list{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
@@ -115,7 +128,7 @@ body {
 }
 
 /* ===== EXPERIENCE CARD ===== */
-.experience-card {
+.experience-card{
     background:rgba(95,201,255,0.1);
     border-radius:20px;
     padding:25px 22px;
@@ -126,38 +139,37 @@ body {
     cursor:pointer;
 }
 
-.experience-card:hover {
+.experience-card:hover{
     transform:translateY(-8px);
     box-shadow:0 18px 40px rgba(95,201,255,.35);
 }
 
-.experience-card h4 {
+.experience-card h4{
     color:#e8f1f8;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
-.experience-card span {
+.experience-card span{
     font-size:14px;
     color:#7ecbff;
     display:block;
     margin-bottom:10px;
 }
 
-.experience-card p {
+.experience-card p{
     font-size:14px;
     opacity:.9;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 /* ===== BUTTONS ===== */
-.experience-buttons {
+.experience-buttons{
     display:flex;
-    justify-content:flex-start;
     gap:12px;
     flex-wrap:wrap;
 }
 
-.experience-buttons .btn {
+.btn{
     display:inline-block;
     font-size:13px;
     padding:10px 22px;
@@ -168,37 +180,26 @@ body {
     transition:0.3s;
 }
 
-.experience-buttons .btn:hover {
+.btn:hover{
     background:#7ecbff;
     color:#0b1c2d;
 }
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
-    .experience-list {
+    .experience-list{
         flex-direction:column;
         align-items:center;
     }
 }
-    @media (hover: hover) {
-  .project-card:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 20px 40px rgba(95, 201, 255, 0.4);
-    border-color: #00e5ff;
-  }
-
-  .project-card:hover i {
-    transform: scale(1.2);
-  }
-}
-
 </style>
 </head>
+
 <body>
+
 <!-- ===== NAVIGATION BAR ===== -->
 <header class="header">
-  <div class="container header-container">
-    <!-- Navigation Menu -->
+  <div class="header-container">
     <nav>
       <ul class="navlist">
         <li><a href="index.html">Home</a></li>
@@ -208,73 +209,71 @@ body {
         <li><a href="Projects.html">Projects</a></li>
         <li><a href="Experience.html">Experience</a></li>
         <li><a href="Certifications.html">Certifications</a></li>
-        <li><a href="pdf/Dibya_CV.pdf" target="_blank">Resume</a></li>
+        <li><a href="pdf/dibya_cv.pdf" target="_blank">Resume</a></li>
         <li><a href="Contact.html">Contact</a></li>
       </ul>
 
-      <!-- Hamburger Icon -->
       <div class="menu-icon">
         <i class="fas fa-bars"></i>
       </div>
     </nav>
   </div>
 </header>
-<section class="experience" id="experience">
-    <div class="container">
 
-        <h2 class="section-title">MY EXPERIENCE</h2>
-        <p>Here is my internship, project, and certificate from NIIT.</p>
+<!-- ===== EXPERIENCE SECTION ===== -->
+<section class="experience">
+  <div class="container">
 
-        <div class="experience-list">
+    <h2 class="section-title">MY EXPERIENCE</h2>
+    <p>Here is my internship experience and project work.</p>
 
-            <!-- EXPERIENCE CARD -->
-            <div class="experience-card"
-                 onclick="window.open('https://github.com/dibyaghosh8/food-ordering','_blank')">
+    <div class="experience-list">
 
-                <h4>Internship at NIIT</h4>
-                <span>Web Development Intern</span>
+      <div class="experience-card"
+      onclick="window.open('https://github.com/dibyaghosh8/food-ordering','_blank')">
 
-                <p>
-                    Completed an internship at NIIT where I developed a
-                    <strong>Food Ordering System</strong>.
-                </p>
+        <h4>Internship at NIIT</h4>
+        <span>Web Development Intern</span>
 
-                <p>
-                    This project improved my practical knowledge of full-stack development.
-                </p>
+        <p>
+          Completed an internship at NIIT where I developed a
+          <strong>Food Ordering System</strong>.
+        </p>
 
-                <div class="experience-buttons">
-                    <a href="pdf/Certificate.pdf"
-                       target="_blank"
-                       class="btn"
-                       onclick="event.stopPropagation();">
-                       View Certificate
-                    </a>
+        <p>
+          This experience improved my practical knowledge of full-stack development.
+        </p>
 
-                    <a href="pdf/Documentation.pdf"
-                       target="_blank"
-                       class="btn"
-                       onclick="event.stopPropagation();">
-                       View Documentation
-                    </a>
-                </div>
+        <div class="experience-buttons">
+          <a href="pdf/certificate.pdf"
+             target="_blank"
+             class="btn"
+             onclick="event.stopPropagation();">
+             View Certificate
+          </a>
 
-            </div>
-
+          <a href="pdf/documentation.pdf"
+             target="_blank"
+             class="btn"
+             onclick="event.stopPropagation();">
+             View Documentation
+          </a>
         </div>
 
+      </div>
+
     </div>
+  </div>
 </section>
+
 <script>
-  const menuIcon = document.querySelector(".menu-icon");
-  const navList = document.querySelector(".navlist");
+const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".navlist");
 
-  menuIcon.addEventListener("click", () => {
-    navList.classList.toggle("active");
-  });
+menuIcon.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
 </script>
-
 
 </body>
 </html>
-
